@@ -12,6 +12,7 @@ export class AppComponent {
 
   addTodo() {
     if(this.todo) {
+      this.todos = [...this.todos]
       this.todos.push({
         text: this.todo,
         done: false
