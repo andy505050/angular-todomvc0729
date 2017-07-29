@@ -10,6 +10,8 @@ export class AppComponent {
   todos: any[] = [];
 
   addTodo(event) {
-    this.todos.push(event.target.value);
+    if(event.target.value) {
+      this.todos.push(event.target.value);
+    }
   }
 }
