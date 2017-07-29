@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Http } from "@angular/http";
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,9 @@ export class AppComponent {
   todo: string = '';
   filterType: string;
   isToggleAll: boolean = false;
+
+  constructor(private http: Http) {
+  }
 
   addTodo() {
     if(this.todo) {
