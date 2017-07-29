@@ -23,9 +23,18 @@ export class FooterComponent implements OnInit {
 
   @Output() onClearBtnClick = new EventEmitter();
 
+  filterType: string = 'All';
+
+  @Output() filterTypeChanged = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeFilterType(value) {
+    this.filterType = value;
+    this.filterTypeChanged.emit(value);
   }
 
 }
