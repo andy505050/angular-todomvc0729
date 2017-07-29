@@ -21,7 +21,7 @@
     </ul>
   </section>
   <!-- This footer should hidden by default and shown when there are todos -->
-  <app-footer [data]="todos" (clearComplete)="clearComplete()"></app-footer>
+  <app-footer [data]="todos" (onClearBtnClick)="clearComplete()"></app-footer>
 </section>
 <footer class="info">
   <p>Double-click to edit a todo</p>
